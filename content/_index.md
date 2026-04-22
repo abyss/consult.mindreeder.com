@@ -6,9 +6,9 @@ hero_cta: "Get in Touch"
 about_heading: "About"
 about_subheading: "Guidance you can trust, from someone inside the art."
 about_body: |
-  With over a decade of experience at the intersection of technology and performance, Mindreeder Consulting serves magicians, mentalists, and illusionists on two fronts: building a polished online presence, and providing hands-on technical support for your effects and props. Because I perform myself, you'll never have to worry about exposure or working with someone who doesn't understand the world you operate in.
+  My name is Craig Reeder. I'm a practicing magician and mentalist with over a decade of experience at the intersection of technology and performance. Mindreeder Consulting serves magicians, mentalists, and illusionists on two fronts: building a polished online presence, and providing hands-on technical support for your effects and apparatus. Because I perform myself, you'll never have to worry about exposure or working with someone who doesn't understand the world you operate in.
 
-  Whether you need a website that books gigs or a second opinion on why an effect isn't performing as intended, I bring the same approach: precision, discretion, and an understanding that every technical element serves the overall performance.
+  By day, I'm a Staff Cloud Engineer at UTurn Data Solutions, leading infrastructure-as-code and engineering best practices for enterprise systems. Whether you need a website that books gigs or a second opinion on why an effect isn't performing as intended, I bring that same technical rigor to every engagement — with the discretion that comes from working inside the art.
 about_credentials:
   - "Practicing magician & mentalist"
   - "10+ years technical consulting"
