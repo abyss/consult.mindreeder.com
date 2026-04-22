@@ -3,7 +3,26 @@
     <div class="section-label">Contact</div>
     <h2>{{ .Params.contact_heading }}</h2>
     <p class="contact-body">{{ .Params.contact_body }}</p>
-    <a href="mailto:{{ hugo.Data.social.email }}" class="btn-primary">{{ .Params.contact_cta }}</a>
+
+    <div class="contact-details">
+      <div class="contact-detail">
+        <p class="contact-detail-label">What to expect</p>
+        <p>{{ .Params.contact_expect }}</p>
+      </div>
+      <div class="contact-detail">
+        <p class="contact-detail-label">What to include</p>
+        <ul>
+          {{ range .Params.contact_include }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+
+    <p class="contact-cta-prompt">{{ .Params.contact_cta }}</p>
+    <a href="mailto:{{ hugo.Data.social.email }}" class="contact-email-link">{{ hugo.Data.social.email }}</a>
+    <p class="contact-response">{{ .Params.contact_response }}</p>
+
     {{ if hugo.Data.social.linkedin }}
     <a href="{{ hugo.Data.social.linkedin }}" class="btn-ghost" target="_blank" rel="noopener">LinkedIn</a>
     {{ end }}
