@@ -1,0 +1,26 @@
+- title: "Online Presence"
+  tagline: "Everything you need to show up professionally online."
+  description: "From domain registration to a polished website and professional email — your complete online presence, built and configured to last."
+  bullets:
+    - "Domain registration and DNS configuration"
+    - "Custom website design and build"
+    - "Professional email setup"
+    - "Hosting, SSL, and ongoing maintenance"
+
+- title: "Performance Technology"
+  tagline: "The tech that powers your show, working flawlessly."
+  description: "From sound and lighting to app-based effects and digital gimmicks, get expert guidance on the technology that makes your live performance land — set up right, every time."
+  bullets:
+    - "A/V, sound, and lighting consultation"
+    - "Presentation systems and show control"
+    - "App-based and digital effect setup"
+    - "Pre-show technical walkthroughs"
+
+- title: "Technical Consulting"
+  tagline: "Real support for the technical side of your magic."
+  description: "When an effect or piece of apparatus isn't behaving, you need troubleshooting from someone who actually performs. Get hands-on support diagnosing and resolving technical issues with your work — without worrying about exposure."
+  bullets:
+    - "Troubleshooting malfunctioning effects and apparatus"
+    - "Diagnosis of electronic and digital effect failures"
+    - "Sourcing repairs or replacement components"
+    - "Remote and in-person consultations available"

@@ -1,0 +1,11 @@
+<section class="contact section-alt" id="contact">
+  <div class="container contact-inner">
+    <div class="section-label">Contact</div>
+    <h2>{{ .Params.contact_heading }}</h2>
+    <p class="contact-body">{{ .Params.contact_body }}</p>
+    <a href="mailto:{{ hugo.Data.social.email }}" class="btn-primary">{{ .Params.contact_cta }}</a>
+    {{ if hugo.Data.social.linkedin }}
+    <a href="{{ hugo.Data.social.linkedin }}" class="btn-ghost" target="_blank" rel="noopener">LinkedIn</a>
+    {{ end }}
+  </div>
+</section>

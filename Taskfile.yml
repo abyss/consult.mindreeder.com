@@ -1,0 +1,11 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task --list
+
+  serve:
+    desc: Start Hugo development server
+    cmds:
+      - hugo server -D

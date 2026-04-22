@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  {{ partial "nav.html" . }}
+  {{ partial "hero.html" . }}
+  <div class="section-divider"><span>♣</span></div>
+  {{ partial "about.html" . }}
+  <div class="section-divider"><span>♣</span></div>
+  {{ partial "services.html" . }}
+  <div class="section-divider"><span>♣</span></div>
+  {{ partial "contact.html" . }}
+  {{ partial "footer.html" . }}
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+baseURL = "https://consult.mindreeder.com/"
+languageCode = "en-us"
+title = "Mindreeder Consulting"
+
+disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT"]
+
+[params]
+  description = "Technical consulting for magicians, mentalists, and illusionists."
+  email = "hello@mindreeder.com"

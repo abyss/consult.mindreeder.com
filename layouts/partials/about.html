@@ -1,0 +1,14 @@
+<section class="about section-alt" id="about">
+  <div class="container about-inner">
+    <div class="section-label">{{ .Params.about_heading }}</div>
+    <h2>{{ .Params.about_subheading }}</h2>
+    <div class="about-body">
+      {{ .Params.about_body | markdownify }}
+    </div>
+    <ul class="credentials">
+      {{ range .Params.about_credentials }}
+      <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+<header class="site-nav" id="site-nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">{{ .Site.Title }}</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const nav = document.getElementById('site-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+</script>
