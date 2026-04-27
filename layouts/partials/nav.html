@@ -6,12 +6,69 @@
       <a href="#services">Services</a>
       <a href="#contact" class="nav-cta">Contact</a>
     </nav>
+    <button class="nav-hamburger" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+    </button>
   </div>
 </header>
 
+<div class="mobile-nav" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="mobile-nav-close" id="menu-close" aria-label="Close menu">
+    <span class="menu-line"></span>
+    <span class="menu-line"></span>
+    <span class="menu-line"></span>
+  </button>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact" class="nav-cta">Contact</a>
+  </nav>
+  <p class="mobile-nav-footer">&copy; {{ now.Year }} {{ .Site.Title }}</p>
+</div>
+
 <script>
+(function() {
   const nav = document.getElementById('site-nav');
-  window.addEventListener('scroll', () => {
+  const toggle = document.getElementById('menu-toggle');
+  const close = document.getElementById('menu-close');
+  const menu = document.getElementById('mobile-nav');
+  const openLines = toggle.querySelectorAll('.menu-line');
+  const closeLines = close.querySelectorAll('.menu-line');
+  let open = false;
+
+  window.addEventListener('scroll', function() {
     nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  function openMenu() {
+    open = true;
+    toggle.setAttribute('aria-expanded', 'true');
+    menu.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    closeLines[0].style.transform = 'translateY(6px) rotate(45deg)';
+    closeLines[1].style.opacity = '0';
+    closeLines[2].style.transform = 'translateY(-6px) rotate(-45deg)';
+    closeLines[2].style.width = '24px';
+  }
+
+  function closeMenu() {
+    open = false;
+    toggle.setAttribute('aria-expanded', 'false');
+    menu.classList.remove('open');
+    document.body.style.overflow = '';
+    closeLines[0].style.transform = '';
+    closeLines[1].style.opacity = '';
+    closeLines[2].style.transform = '';
+    closeLines[2].style.width = '';
+  }
+
+  toggle.addEventListener('click', openMenu);
+  close.addEventListener('click', closeMenu);
+
+  menu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', closeMenu);
   });
+})();
 </script>

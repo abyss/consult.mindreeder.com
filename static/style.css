@@ -668,23 +668,120 @@ button.btn-primary {
 }
 
 /* =========================================================
+   Mobile Nav
+   ========================================================= */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 150;
+}
+
+/* =========================================================
    Responsive
    ========================================================= */
 @media (max-width: 768px) {
   :root { --section-pad: 3.5rem; }
-
-  .site-nav nav { gap: 1.25rem; }
-  .site-nav nav a { font-size: 0.8rem; }
 
   .hero-inner { padding-top: 7rem; }
 
   .services-grid { grid-template-columns: 1fr; }
 
   .btn-ghost { margin-left: 0; margin-top: 1rem; display: block; text-align: center; }
+
+  .site-nav nav { display: none; }
+  .nav-hamburger { display: flex; }
 }
 
 @media (max-width: 480px) {
   .nav-inner { padding: 1rem 1.25rem; }
   .container { padding: 0 1.25rem; }
-  .site-nav nav a:not(.nav-cta) { display: none; }
+}
+
+.menu-line {
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--color-accent);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-line:last-child { width: 16px; }
+
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10,10,15,0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.mobile-nav.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-nav nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.mobile-nav nav a {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--color-text);
+  letter-spacing: 0.04em;
+  transition: color var(--transition);
+}
+
+.mobile-nav nav a:hover { color: var(--color-accent); }
+
+.mobile-nav .nav-cta {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.mobile-nav-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-nav-close .menu-line {
+  width: 24px;
+}
+
+.mobile-nav-footer {
+  position: absolute;
+  bottom: 2rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  opacity: 0.4;
 }
