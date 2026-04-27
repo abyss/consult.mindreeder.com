@@ -7,3 +7,4 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT"]
 [params]
   description = "Technical consulting for magicians, mentalists, and illusionists."
   email = "consulting@mindreeder.com"
+  formspree_id = "xdaybawj"

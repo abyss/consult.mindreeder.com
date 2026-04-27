@@ -294,6 +294,12 @@ ul { list-style: none; }
 
 .about-body p + p { margin-top: 1rem; }
 
+.about-body a {
+  color: var(--color-accent);
+  transition: opacity var(--transition);
+}
+.about-body a:hover { opacity: 0.75; }
+
 .credentials {
   display: flex;
   flex-wrap: wrap;
@@ -482,7 +488,65 @@ ul { list-style: none; }
   font-size: 0.9rem;
   color: var(--color-text-muted);
   font-style: italic;
+  margin-top: 1.25rem;
   margin-bottom: 0;
+}
+
+/* =========================================================
+   Contact Form
+   ========================================================= */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.form-group input,
+.form-group textarea {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  padding: 0.7rem 1rem;
+  outline: none;
+  transition: border-color var(--transition);
+  resize: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--color-accent);
+}
+
+@media (max-width: 600px) {
+  .form-row { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 600px) {
