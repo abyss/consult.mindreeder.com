@@ -4,6 +4,14 @@
     <nav>
       <a href="#about">About</a>
       <a href="#services">Services</a>
+      <div class="nav-social">
+        {{ range hugo.Data.social.items }}
+        {{ $icon := resources.GetRemote (printf "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/%s.svg" .name) }}
+        <a href="{{ .url }}" target="_blank" rel="noopener" aria-label="{{ .name }}" class="social-icon-link">
+          {{ with $icon }}{{ .Content | safeHTML }}{{ end }}
+        </a>
+        {{ end }}
+      </div>
       <a href="#contact" class="nav-cta">Contact</a>
     </nav>
     <button class="nav-hamburger" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">

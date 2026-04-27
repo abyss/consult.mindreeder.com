@@ -1,2 +1,6 @@
 email: "consulting@mindreeder.com"
-linkedin: ""
+items:
+  - name: "linkedin"
+    url: "https://linkedin.com/in/craig-reeder"
+  - name: "instagram"
+    url: "https://instagram.com/craigmindreeder"

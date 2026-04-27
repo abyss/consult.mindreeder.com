@@ -5,10 +5,13 @@
     <div class="about-body">
       {{ .Params.about_body | markdownify }}
     </div>
-    <ul class="credentials">
-      {{ range .Params.about_credentials }}
-      <li>{{ . }}</li>
+    <div class="about-stats">
+      {{ range .Params.about_stats }}
+      <div class="about-stat">
+        <span class="about-stat-value">{{ .value }}</span>
+        <span class="about-stat-label">{{ .label }}</span>
+      </div>
       {{ end }}
-    </ul>
+    </div>
   </div>
 </section>

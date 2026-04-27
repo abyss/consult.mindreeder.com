@@ -1,6 +1,14 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <p>&copy; {{ now.Year }} {{ .Site.Title }}. All rights reserved.</p>
+    <div class="footer-social">
+      {{ range hugo.Data.social.items }}
+      {{ $icon := resources.GetRemote (printf "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/%s.svg" .name) }}
+      <a href="{{ .url }}" target="_blank" rel="noopener" aria-label="{{ .name }}" class="social-icon-link">
+        {{ with $icon }}{{ .Content | safeHTML }}{{ end }}
+      </a>
+      {{ end }}
+    </div>
     <p>By <a href="https://mindreeder.com" target="_blank" rel="noopener">Craig Reeder</a></p>
   </div>
 </footer>
